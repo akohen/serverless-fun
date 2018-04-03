@@ -1,0 +1,15 @@
+service: static-website
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+  profile: serverless
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: akohen-static-website-bucket
